@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+    <script src="jquery-3.3.1.min.js"></script>
+    
+    <style>
+        body{
+            background-color: rgb(111, 216, 196);
+        }
+        @media screen and (max-width:480px){
+            body{
+                background-color: rgba(182, 138, 226, 0.78);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+    <form action="" id="form">
+        <textarea name="" id="memo" cols="30" rows="10"></textarea>
+        <div>
+            <input id="save" type="button" value="保存">
+            <input id="dele" type="button" value="消去">
+        </div>
+    </form>
+    </div>
+    
+    <script>
+        var memo=localStorage.getItem("memodate");
+        $('#memo').val(memo);
+        
+        $('#save').click(function(){
+            memo= $('memo').val();
+            localStorage.setItem("memodate",memo);
+        });
+        
+        $('#dele').click(function(){
+            $('#memo').val('');
+            localStorage.clear();
+        });
+        
+    </script>
+</body>
+
+</html>
