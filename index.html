@@ -5,8 +5,11 @@
 	<title>クイズゲーム</title>
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="mobile/jquery.mobile-1.4.5.min.css" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+   
+    <link rel="stylesheet" href="mobile/jquery.mobile-1.4.5.min.css" />
+
+    <style type="text/css">a{text-decoration:none;}</style>
     
     <script src="mobile/jquery-1.12.4.min.js"></script>
     <script src="mobile/jquery.mobile-1.4.5.min.js"></script>
@@ -110,6 +113,8 @@ window.addEventListener('load',init);
 </script>
 </head>
 <body>
+<div class="theBridge">
+
 <div id="gamePlay">
 	<h1>海外のユニークな法律クイズ</h1>
 	<div id="mondai"></div>
@@ -142,6 +147,6 @@ window.addEventListener('load',init);
 
 <a href="#" onClick="window.close();">ウィンドウを閉じる</a><br/>
 </div>
-
+    </div>
 </body>
 </html>
